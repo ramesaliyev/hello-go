@@ -1,0 +1,32 @@
+get
+    go get <github.com/GoesToEleven/GolangTraining>
+    # fetch package
+    # -u arg for updating package
+
+fmt
+    go fmt <file.go>
+    # format file
+
+run
+    go run <file.go>
+    # compile and run
+
+help
+    go help <command>
+    # get help about command
+
+build
+    go build
+    # for an executable -> builds, creates executable file (binary), puts under current folder
+    # for an package -> builds, creates executable file (binary), removes binary (use for test)
+    # expects single file in folder
+
+install
+    go install
+    # for an executable -> builds, creates executable file (binary), puts under $GOPATH/bin
+    # for an package -> builds, creates archive file (.a), puts under $GOPATH/pkg
+    # expects single main file in root folder
+
+clean
+    go clean
+    # clears builds

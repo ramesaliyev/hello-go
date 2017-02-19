@@ -1,0 +1,16 @@
+# Folder Structure
+
+    ~/GoWorkspace
+        - bin
+        - pkg
+        - src
+        -- github.com
+        --- username
+        ---- repo
+
+# Env Variables
+
+    export GOROOT="/usr/local/go" # (response of "which go" without "/bin/go")
+    export GOPATH="$HOME/GoWorkspace" # (our workspace path)
+    export PATH="$GOPATH/bin:$PATH" # (bin path of our workspace)
+
