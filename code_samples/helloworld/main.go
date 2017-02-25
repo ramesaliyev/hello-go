@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Naber aq?")
+	fmt.Printf("%#x \n", 1421)
 }

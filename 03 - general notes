@@ -1,2 +1,56 @@
+{} - braces, curly braces, curlies, mustaches
+[] - brackets
+() - parentheses, parens
+
+# executable
 - every executable go program needs main package and main function to start.
--
+
+# package
+- all files that belong to one package, share a package scope. so they can access each other.
+- when first letter of an identifier is upper case in a package, it means that identifier is exported and visible outside of the package
+- a package is basically is a one folder and multiple files with same package name.
+- it's good to use package name as folder name, but not mandatory.
+
+# variables
+- shorthand notation can only be used inside functions: (var kamil = 5) or (kamil := 5)
+- if you use var and dont assign variable to a value it's going to have "zero value" of it's own kind (0 for int, "" for string... etc.)
+- types without zero values will have "nil" as zero value
+
+- declaration: (var b string)
+- assignment: (b = "kamil")
+- declaration + assignment = initalization: (var b string = "kamil") or (b := "kamil")
+
+# scope (where do i access to a variable)
+- levels of scope
+-- universe (built-in methods, type names etc.)
+-- package (files of a same package can access each other)
+-- file (an import only accessible to its own file)
+-- block (curly brackets)
+
+# function
+- we can return all types from a function
+
+# blank identifier (_)
+- allows you to tell the compiler you arent using something
+
+# constants
+- untyped constans are named as "kind"
+- every literal value is actually a constant, and dont stricly obey rules like "dont mix the types"
+
+# pointers
+- & operator gets the memory address of a variable
+- pointers are supposed to be assigned to memory addresses, so they points to memory address
+- eg:
+    a := 43
+    var b *int = &a
+    // b is a pointer and points to a's memory address
+    // we can get the value that sits in that memory address with *b (dereferencing).
+    // we can change the value that sits in that memory address with same way.
+    *b = 42
+
+## if you are from javascript
+- there is no hoisting in go
+- there is closures in go (and of course functions can return another function (high order functions))
+- there is function declaration and expression
+- there is no mixing types, its staticly typing
+- everything is PASS BY VALUE in go, even memory addresses and pointers!

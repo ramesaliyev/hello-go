@@ -19,13 +19,11 @@ build
     go build
     # for an executable -> builds, creates executable file (binary), puts under current folder
     # for an package -> builds, creates executable file (binary), removes binary (use for test)
-    # expects single file in folder
 
 install
     go install
     # for an executable -> builds, creates executable file (binary), puts under $GOPATH/bin
     # for an package -> builds, creates archive file (.a), puts under $GOPATH/pkg
-    # expects single main file in root folder
 
 clean
     go clean
