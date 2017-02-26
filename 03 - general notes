@@ -2,6 +2,11 @@
 [] - brackets
 () - parentheses, parens
 
+# so general
+- we call casting as convertion in go, for example: []byte("Hello"), convert hello string into byte list
+- single quotes are for runes
+- double quotes and backticks for strings
+
 # executable
 - every executable go program needs main package and main function to start.
 
@@ -48,9 +53,93 @@
     // we can change the value that sits in that memory address with same way.
     *b = 42
 
-## if you are from javascript
-- there is no hoisting in go
-- there is closures in go (and of course functions can return another function (high order functions))
-- there is function declaration and expression
-- there is no mixing types, its staticly typing
-- everything is PASS BY VALUE in go, even memory addresses and pointers!
+# loops
+- there is only for loop, but we can use it like while
+- we can use break and continue in loop.
+
+# rune
+- a character
+- an integer value identifying a unicode code point
+- for rune we use singlequotes
+- rune is an alias for int32 (like byte is an alias for int8)
+- utf8 is 4 byte (4*8=32bit = int32) coding scheme
+- for example;
+    x := 'a' is a rune definition and x has 97 as value
+    type of x is int32
+
+# string
+- strings are just collections of runes
+
+# switch
+- there is no default fall-through (dont have to use break)
+- you can create fall-through with fallthrough keyword in the end of the case statement.
+- you can use multiple cases with comma separated
+- switch without expression (variable) will resolve to first case that valuates to true
+- you can switch by type
+    switch x.(type) { // this is an assert
+        case int:
+            ...
+        case string:
+            ...
+    }
+
+# if
+- you can initialize a variable within if statement
+
+# funcs
+- main package's main func is the entrypoint of the code
+- parameter is what functions declares it needs, argument is what we pass to the function as a parameter.
+- variadic function means it can take zero or multiple arguments, final parameter in that function is prefixed with ...
+- variadic arguments means passing an list (slice) to a function like passing every item one by one (like .apply in javascript)
+- functions is actually a type and type of functions is "func()"
+- defer keyword defers execution of function until current function exit
+
+    func <receiver> <name>(<parameters>) <return> { <body> }
+
+    func greet(name string, surname string) == func greet(name, surname string)
+
+    func greet(name, surname string) string { return s
+    // we gonna return string
+
+    func greet(name, surname string) (s string) { return
+    // we gonna return s and its gonna be string
+    // we dont have to say return s. just return
+
+    func greet(name, surname string) (string, string) { return s, a
+    // return multiple values
+
+    func average(nums ...float64) float64 {
+    // this function is variadic
+
+    data := []float64{43, 56, 75, 12}
+    average(data...)
+    // this argument is variadic
+
+    greet := func() { ... }
+    // function expression with anonymous func
+    // only way to have a function inside another function
+
+    func makeGreeter() func() string {
+        return func() string {
+            return "Hello"
+        }
+    }
+    // this function returns a function which returns string
+
+    func comeon(callback func(int)) {
+        callback(1);
+    }
+    comeon(func (s int) {
+        ...
+    })
+    // taking callback
+
+    func() { ... }()
+    // anonymous self-executed function
+
+# make command
+- allocates memory for these three types: slices, maps and channels
+
+# slice, map, channel
+- these types are referenced type types, and they dont holds any value they just reference that values in memory
+- everything is PASSED BY VALUE in go, this types also! but because these types dont hold values, its look like these types passed by reference
