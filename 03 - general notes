@@ -6,6 +6,8 @@
 - we call casting as convertion in go, for example: []byte("Hello"), convert hello string into byte list
 - single quotes are for runes
 - double quotes and backticks for strings
+- byte is alias for uint8
+- rune is alias for int32
 
 # executable
 - every executable go program needs main package and main function to start.
@@ -68,7 +70,8 @@
     type of x is int32
 
 # string
-- strings are just collections of runes
+- strings are just collections of runes, runes are made of bytes, so strings are made of bytes. so a string is slice of bytes.
+
 
 # switch
 - there is no default fall-through (dont have to use break)
@@ -138,8 +141,66 @@
     // anonymous self-executed function
 
 # make command
-- allocates memory for these three types: slices, maps and channels
+- allocates memory for these three reference types: slices, maps and channels
 
 # slice, map, channel
 - these types are referenced type types, and they dont holds any value they just reference that values in memory
 - everything is PASSED BY VALUE in go, this types also! but because these types dont hold values, its look like these types passed by reference
+
+# array
+- if you DO see a number between brackets its an array
+- arrays belongs to specific types, arrays can only hold values that belongs to that single type
+- actually we dont use array so much in go
+- size of an array cant change (not dynamic)
+- you can get length of an array with built-in function `len
+- its not reference type
+
+    var <name> [<size>]<type>
+    var x [50]string
+
+    var multiarr [3][3][3]int
+    multiarr[0][0][0] = 1
+    // multi-dimensional array
+
+# slice
+- if you DONT see a number between brackets its a slice
+- it is a reference type
+- size of an slice can change (dynamic)
+- slices are have underlying arrays
+- capacity is size of the underlying array
+- length is the actual size of the slice
+- if slice exceeds size of the underlying array, computer will throw old array and create new array with the TWICE size
+of the original one, and this has performance cost. so its good the set right capacity for our slice.
+- its okay to have ending comma in slice definition
+
+    myslice := []string{"a", "b", "c",}
+    // its okay to have ending comma
+
+    myslice[2:4]
+    myslice[2:]
+    myslice[:4]
+    myslice[:]
+    // slicing a slice, closed by left, open by right
+
+    same := make([]int, 50, 100)
+    same := new([100]int)[0:50]
+    // same thing
+
+    myslice := make([]int, 0, 5)
+    myslice = append(myslice, 1)
+    myslice = append(myslice, 2)
+
+    myslice2 := make([]int, 0, 5)
+    myslice2 = append(myslice2, myslice...)
+    // appending slice to slice
+
+    myslice2 = append(myslice2[:2], myslice2[3:]...)
+    // delete from the slice
+    // index 2 will be deleted
+
+    records := make([][]string, 0)
+    record1 := make([]string, 0)
+    records = append(records, record1)
+    // multi-dimensional slice
+    // you can make it 10 dimension if you want to
+    // but you have to create every slice of every dimension (unlike multi-dimension arrays)
