@@ -18,7 +18,7 @@ func main() {
 
     fmt.Println(intarray)
 
-    // array is not reference type so its gonna PASS BY VALUE
+    // array is not reference type so its not gonna change our array
     change(intarray)
 
     // dont changed

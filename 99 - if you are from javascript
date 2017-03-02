@@ -19,4 +19,4 @@ UNLIKE
 
 ADDITIONAL
 - everything is PASSED BY VALUE in go
-
+- use slices for array purposes instead of arrays
