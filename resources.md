@@ -18,6 +18,7 @@
 ### Courses
 
   - [ ] [Udemy - Go the Complete Developers Guide](https://www.udemy.com/course/go-the-complete-developers-guide/)
+  - [ ] [Udemy - Learn How To Code: Google's Go (golang) Programming Language](https://www.udemy.com/course/learn-how-to-code/)
 
 ### Articles
 
