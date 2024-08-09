@@ -1,12 +1,22 @@
 ## Resources
 
-### Courses / Books / Series / Tutorials
+### Article Series / Walkthroughs
   - [x] [go.dev - Tour](https://go.dev/tour/welcome)
-  - [ ] [Udemy - Go the Complete Developers Guide](https://www.udemy.com/course/go-the-complete-developers-guide/)
-  - [ ] [go.dev - Effective Go](https://go.dev/doc/effective_go)
+  - [ ] [Go by Example.com](https://gobyexample.com)
   - [ ] [go.dev - Codewalk: Share Memory By Communicating](https://go.dev/doc/codewalk/sharemem/)
   - [ ] [go.dev - Writing Web Applications](https://go.dev/doc/articles/wiki/)
-  - [ ] [Go by Example.com](https://gobyexample.com)
+  - [ ] [go.dev - Effective Go](https://go.dev/doc/effective_go)
+
+### Books
+
+  - [ ] [Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests)
+  - [ ] [go101.org](https://go101.org)
+  - [ ] [Alex Edwards, Let's Go](https://lets-go.alexedwards.net)
+  - [ ] [Alex Edwards, Let's Go Further](https://lets-go-further.alexedwards.net)
+
+### Courses
+
+  - [ ] [Udemy - Go the Complete Developers Guide](https://www.udemy.com/course/go-the-complete-developers-guide/)
 
 ### Articles
 
