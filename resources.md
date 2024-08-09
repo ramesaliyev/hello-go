@@ -1,6 +1,7 @@
 ## Resources
 
 ### Article Series / Walkthroughs
+
   - [x] [go.dev - Tour](https://go.dev/tour/welcome)
   - [ ] [Go by Example.com](https://gobyexample.com)
   - [ ] [go.dev - Codewalk: Share Memory By Communicating](https://go.dev/doc/codewalk/sharemem/)
@@ -28,3 +29,4 @@
 
   - [ ] [Google I/O 2012 - Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
   - [ ] [Google I/O 2013 - Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)
+  - [x] [Advanced HTTP Routing with Standard Library](https://www.youtube.com/watch?v=H7tbjKFSg58)
