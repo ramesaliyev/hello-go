@@ -25,6 +25,7 @@
   - [ ] [go.dev/blog - Go's Declaration Syntax](https://go.dev/blog/declaration-syntax)
   - [ ] [go.dev/blog - Defer, Panic, and Recover](https://go.dev/blog/defer-panic-and-recover)
   - [ ] [go.dev/blog - Go Slices: usage and internals](https://go.dev/blog/slices-intro)
+  - [x] [osmh.dev - Goroutines Under the Hood](https://osmh.dev/posts/goroutines-under-the-hood)
 
 ### Videos
 
