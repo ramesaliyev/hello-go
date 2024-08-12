@@ -28,6 +28,7 @@
 
 ### Videos
 
+  - [ ] [Concurrency is not Parallelism](https://go.dev/blog/waza-talk)
   - [ ] [Google I/O 2012 - Go Concurrency Patterns](https://www.youtube.com/watch?v=f6kdp27TYZs)
   - [ ] [Google I/O 2013 - Advanced Go Concurrency Patterns](https://www.youtube.com/watch?v=QDDwwePbDtw)
   - [x] [Advanced HTTP Routing with Standard Library](https://www.youtube.com/watch?v=H7tbjKFSg58)
